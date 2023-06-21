@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main_theme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TodoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:backgroundTint="#BBBDD7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/appbar_layout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll"
+            app:titleTextColor="@color/black"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_addTodo"
+        android:backgroundTint="#7AB5B7"
+        app:layout_anchor="@id/toolbar"
+        app:layout_anchorGravity="bottom|right"
+        android:src="@drawable/ic_edit"
+        android:layout_margin="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@color/white"
+        />
+
+    <!-- Bottom sheet -->
+
+    <RelativeLayout
+        android:id="@+id/bs"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@color/sub_theme"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:elevation="16dp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:background="#F9F871"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_bs_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="안드로이드 앱 개발"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:text="완료일"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_bs_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="2023년 6월 21일"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:text="Note"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_bs_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bs_note"
+                android:gravity="top"
+                android:hint="detail"
+                android:lines="3"
+                android:padding="8dp"
+                android:textColor="#FF333333"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#444747"
+                android:layout_gravity="right"
+                android:text="완료" />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
