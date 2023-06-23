@@ -19,8 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:textSize="20sp"
-        layout
-
         android:layout_marginBottom="32dp"
         android:text="All Tasks" />
 
