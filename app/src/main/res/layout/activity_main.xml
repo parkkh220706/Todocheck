@@ -35,8 +35,8 @@
                 android:orientation="horizontal">
 
                 <include
+                    layout="@layout/category_all"
                     android:id="@+id/include_category_all"
-                    layout="@layout/category_all_v2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"

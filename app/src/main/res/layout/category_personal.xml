@@ -12,16 +12,31 @@
         android:layout_height="80dp"
         android:src="@drawable/ic_personal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-/>
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Personal"
-        android:layout_marginBottom="32dp"
-        android:layout_gravity="bottom"
-        android:layout_margin="16dp"/>
+        android:layout_gravity="bottom||center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:textSize="20sp"
+        android:text="Personal" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom||center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Items"
+        android:layout_gravity="bottom||center_horizontal"
+        />
 
 
 

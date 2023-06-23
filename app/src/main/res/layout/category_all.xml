@@ -8,7 +8,6 @@
     android:layout_height="match_parent">
 
 
-
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -19,10 +18,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom||center_horizontal"
+        android:layout_marginBottom="40dp"
         android:textSize="20sp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginBottom="32dp"
         android:text="All Tasks" />
 
     <TextView
@@ -31,17 +29,14 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textColor="@color/black"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="65dp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom||center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Items"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="78dp"
-        android:layout_gravity="bottom"
+        android:layout_gravity="bottom||center_horizontal"
         />
 
 
