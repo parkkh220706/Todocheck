@@ -8,6 +8,9 @@ class TodoActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityTodoBinding
 
+    var category:Int=0
+    var categoryTitle:Array<String> = arrayOf("ALL", "WORK", "PERSONAL", "STUDY", "ETC", "DONE")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTodoBinding.inflate(layoutInflater)

@@ -89,6 +89,7 @@
                     android:layout_weight="1" />
 
                 <include
+                    android:id="@+id/include_category_done"
                     layout="@layout/category_done"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
