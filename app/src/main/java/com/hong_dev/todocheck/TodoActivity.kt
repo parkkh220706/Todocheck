@@ -11,10 +11,14 @@ class TodoActivity : AppCompatActivity() {
     var category:Int=0
     var categoryTitle:Array<String> = arrayOf("ALL", "WORK", "PERSONAL", "STUDY", "ETC", "DONE")
 
+    var todoItems:MutableList<TodoItem> = mutableListOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTodoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
     }
 
 
