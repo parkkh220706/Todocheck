@@ -14,7 +14,7 @@ class TodoActivity : AppCompatActivity() {
     lateinit var binding: ActivityTodoBinding
 
     var category:Int=0
-    var categoryTitle:Array<String> = arrayOf("ALL", "WORK", "PERSONAL", "STUDY", "ETC", "DONE")
+    var categoryTitle:Array<String> = arrayOf("ALL", "PERSONAL", "WORK", "STUDY", "ETC", "DONE")
 
     var todoItems:MutableList<TodoItem> = mutableListOf()
 

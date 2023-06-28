@@ -52,11 +52,11 @@ class MainActivity : AppCompatActivity() {
         var countDone:Long = DatabaseUtils.longForQuery(db, "SELECT COUNT(*) FROM todo Where isDone=1", null)
 
         binding.includeCategoryAll.tvNum.text= countAll.toString()
-        binding.includeCategoryPersonal.tvNum.text= countAll.toString()
-        binding.includeCategoryWork.tvNum.text= countAll.toString()
-        binding.includeCategoryStudy.tvNum.text= countAll.toString()
-        binding.includeCategoryEtc.tvNum.text= countAll.toString()
-        binding.includeCategoryDone.tvNum.text= countAll.toString()
+        binding.includeCategoryPersonal.tvNum.text= countPersonal.toString()
+        binding.includeCategoryWork.tvNum.text= countWork.toString()
+        binding.includeCategoryStudy.tvNum.text= countStudy.toString()
+        binding.includeCategoryEtc.tvNum.text= countEtc.toString()
+        binding.includeCategoryDone.tvNum.text= countDone.toString()
 
 
     }

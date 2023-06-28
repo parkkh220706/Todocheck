@@ -14,12 +14,15 @@
         android:theme="@style/Theme.Todocheck"
         tools:targetApi="33">
         <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:name=".EditActivity"
             android:exported="false" />
         <activity
             android:name=".TodoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
