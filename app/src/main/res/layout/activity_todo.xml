@@ -9,9 +9,9 @@
     tools:context=".TodoActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:backgroundTint="#BBBDD7"
+        android:backgroundTint="@color/main_theme"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:id="@+id/appbar_layout">
 
         <androidx.appcompat.widget.Toolbar
@@ -27,10 +27,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_addTodo"
-        android:backgroundTint="#7AB5B7"
-        app:layout_anchor="@id/toolbar"
+        android:backgroundTint="#373737"
+        app:layout_anchor="@id/recycler_view"
         app:layout_anchorGravity="bottom|right"
-        android:src="@drawable/ic_edit"
+        android:src="@drawable/ic_add"
         android:layout_margin="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -49,7 +49,7 @@
     <RelativeLayout
         android:id="@+id/bs"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="290dp"
         android:background="@color/sub_theme"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
         app:behavior_peekHeight="0dp"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:padding="4dp"
-                android:text="완료일"
+                android:text="DATE"
                 android:textSize="12sp" />
 
             <TextView
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
-                android:text="2023년 6월 21일"
+                android:text="2023. 6. 21."
                 android:textColor="@color/black" />
 
             <TextView
@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_bs_note"
                 android:gravity="top"
-                android:hint="detail"
+                android:hint="description"
                 android:lines="3"
                 android:padding="8dp"
                 android:textColor="#FF333333"
@@ -130,7 +130,8 @@
                 android:layout_gravity="right"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="#444747"
-                android:text="완료" />
+                android:text="COMPLETE"
+                android:textColor="@color/white"/>
 
 
         </LinearLayout>

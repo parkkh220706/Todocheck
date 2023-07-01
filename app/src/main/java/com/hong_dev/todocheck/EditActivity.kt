@@ -20,7 +20,7 @@ class EditActivity : AppCompatActivity() {
     var categoryTitle = arrayOf(
         "ALL", "WORK", "PERSONAL", "STUDY", "ETC", "DONE"
     )
-    var date: String = "2022년 07월 06일"
+    var date: String = "2022. 07. 06."
 
     var bottomSheetDialog: BottomSheetDialog? = null // 널허용, null로 초기화.
 
@@ -31,12 +31,12 @@ class EditActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "할일추가"
+        supportActionBar?.title = "Add Schedule"
 
         category = intent.getIntExtra("category", 0)
         binding.tvCategory.text = categoryTitle[category]
 
-        date = SimpleDateFormat("yyyy년 mm월dd일").format(Date())
+        date = SimpleDateFormat("yyyy. mm. dd.").format(Date())
         binding.tvDate.text = date
 
         binding.tvDate.setOnClickListener { showBottomDialogCalendar() }
@@ -53,7 +53,7 @@ class EditActivity : AppCompatActivity() {
         val calendarView = bottomSheetDialog?.findViewById<CalendarView>(R.id.dialog_calendar)
         calendarView?.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val calendar = GregorianCalendar(year, month, dayOfMonth)
-            date = SimpleDateFormat("yyyy년 MM월 dd일").format(calendar.time)
+            date = SimpleDateFormat("yyyy. MM. dd.").format(calendar.time)
             binding.tvDate.text = date
             bottomSheetDialog?.dismiss()
         }
